@@ -13,11 +13,24 @@ From the above points one can use following approaches to predict the call volum
 4. Regression, Boosted Trees Regression (Suggested)
 
 For this program, I have chosen the suggested approach of using Gradient Boosting Regression technique for which I have used `xgboost` library.
+
+## Requirements
+The program is a `python 3.x` code and requires following python libraries to be existing or pre-installed before running the program
+`numpy`
+`matplotlib`
+`sklearn`
+`pandas`
+`xgboost`
+`sodapy`
+`pickle`
+
+You may install them using `pip install <library>` or `pip3 install <library>
  
 ### Enclosed Data:
 
 1. **Data Files**:
     - `seattle_weather.csv`: Weather Data for Seattle
+    - `download_call_data.py`: A script to download `seattle_sos.csv`
     - `seattle_sos.csv`: 911 call data to Fire Department Service of the Seattle City - Downloaded from: https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj
 
 2. **Program Files**:
