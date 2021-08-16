@@ -17,13 +17,13 @@ For this program, I have chosen the suggested approach of using Gradient Boostin
 
 ## Requirements
 The program is a `python 3.x` code and requires following python libraries to be existing or pre-installed before running the program
-`numpy`
-`matplotlib`
-`sklearn`
-`pandas`
-`xgboost`
-`sodapy`
-`pickle`
+ - `numpy`
+ - `matplotlib`
+ - `sklearn`
+ - `pandas`
+ - `xgboost`
+ - `sodapy`
+ - `pickle`
 
 You may install them using `pip install <library>` or `pip3 install <library>`
  
