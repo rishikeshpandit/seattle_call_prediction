@@ -30,13 +30,13 @@ For this program, I have chosen the suggested approach of using Gradient Boostin
     - `cleanup.sh` cleans up all output files except data input to program
 
 3. **Extras**: 
-    -`investigation.ipynb`: contains all data visualisation plots of raw data, that can be useful to know more about the problem, the datasets and helps to derive the best solution. **NOTE:** Execute cells in order for a successful run until the end
+    -`investigation.ipynb`: contains all data visualisation plots of raw data, that can be useful to know more about the dataset and helps to derive the best solution for the problem. **NOTE:** Execute cells in order for a successful run until the end
 
 ## Setting-up Parameters
 To use this program, a priliminary analysis is needed. One must carefully investigate the Input Data, Datatypes, Weather Indicators, Timezone etc. I have summarised my full data visualisation plots in the notebook file
 
 ### Checking the Input Dataframes
-Input Dataframes must be csv files with following columns:
+Input Dataframe to Model must be csv files with following columns:
 - index: `["Date"]` : in hour resolution
 - columns: `["Counts"]`, `["temp_max"]`, `["wind_speed"]`, `["weather_id"]`, `["D_before"]`, `["W_before"]`, `["M_before"]`, `["Y_before"]`
 
