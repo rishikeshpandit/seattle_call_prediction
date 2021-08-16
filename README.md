@@ -54,5 +54,6 @@ Input Dataframe to Model must be csv files with following columns:
 - columns: `["Counts"]`, `["temp_max"]`, `["wind_speed"]`, `["weather_id"]`, `["D_before"]`, `["W_before"]`, `["M_before"]`, `["Y_before"]`
 
 ## How to Run the program
+- First download Seattle Call Data and store in `seattle_sos.csv` using script `download_call_data.py`. You may directly run the executable. **Note: Make sure that you have all the libraries installed before executing any of the program files**
 - Simply run the executable `main.py` with the command `./main.py` or `python3 main.py`
 - After successful execution, run `plot.py` for creating final plot files
