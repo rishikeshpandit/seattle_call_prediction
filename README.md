@@ -25,7 +25,7 @@ The program is a `python 3.x` code and requires following python libraries to be
 `sodapy`
 `pickle`
 
-You may install them using `pip install <library>` or `pip3 install <library>
+You may install them using `pip install <library>` or `pip3 install <library>`
  
 ### Enclosed Data:
 
