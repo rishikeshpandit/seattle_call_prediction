@@ -6,6 +6,7 @@ The given problem is an example of timeseries data analysis for which one must t
  - A model that remembers the variables historical movement through time would give out the best solution. This means that one cannot split the to-be-modelled data in random training and testing samples as each step contains the periodic history
  - ML methods, e.g. saving best accurate model and using it forever, that are traditionally used for classification problems cannot be used for Timeseries Data as the variable is time-dependent and a non-updated model with latest data may not work in this case
 From the above points one can use following approaches to predict the call volume:
+
 ***Possible Approaches***
 1. FB Prophet or SARIMA
 3. SVM or Random Forests
