@@ -14,7 +14,7 @@ plt.plot(preddf.index, preddf.counts.values, label="Actual Counts")
 plt.plot(preddf.index, preddf.prediction.values, label="Predited Counts")
 plt.legend()
 plt.suptitle('August 2019 to August 2020 Forecast vs Actuals')
-plt.savefig("prediction_year.png")       #Final Comparison Plotfile
+plt.savefig("plots/prediction_year.png")       #Final Comparison Plotfile
 
 
 fig, ax = plt.subplots(1)
@@ -26,7 +26,7 @@ ax.set_xbound(lower=pd.Timestamp('2019-08-15'), upper=pd.Timestamp('2019-09-15')
 ax.set_ylim(0, 60)
 plt.legend()
 plt.suptitle('August-September 2019 Forecast vs Actuals')
-plt.savefig("prediction_month.png")
+plt.savefig("plots/prediction_month.png")
 
 
 
@@ -44,4 +44,4 @@ ax2.set_xlabel("Week", fontsize=18)
 ax2.set_ylabel("Counts", fontsize=18)
 ax2.legend(title="Weekly", fontsize=14)
 plt.suptitle("Daily and Weekly Call Volume, Actual vs Prediction.png")
-plt.savefig("daily_weekly_comparison.png")
+plt.savefig("plots/daily_weekly_comparison.png")

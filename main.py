@@ -42,7 +42,7 @@ def main():
     fig.set_figheight(6)
     fig.set_figwidth(16)
     ax = plot_importance(model, height=0.9)
-    plt.savefig("feature_importance.png")
+    plt.savefig("plots/feature_importance.png")
 
 
     df = ydf.copy()
