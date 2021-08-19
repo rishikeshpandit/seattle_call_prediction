@@ -22,7 +22,7 @@ class DataPrep:
 
     # To Preprocess Original call dataframe and extract needed features
     def prepare_call_data(self, trim=False, startdate=None, enddate=None):
-        self.rename(columns={"Datetime":"local_time"}, inplace=True)
+        self.rename(columns={"datetime":"local_time"}, inplace=True)
         self.local_time = pd.to_datetime(self.local_time, infer_datetime_format=True)               #infer datetime for speeding up parsing
         self.loc[:, "day"] = pd.to_datetime(self.local_time.dt.strftime("%Y-%m-%d"))                #add day resolution column
         self.loc[:, "hour"] = pd.to_datetime(self.local_time.dt.strftime("%Y-%m-%d %H:00:00"))      #add hour resolution column
