@@ -3,5 +3,5 @@
 rm to_*.csv
 rm counts_df.csv
 rm *.dat
-rm *.png
+rm plots/*.png
 rm *.log
