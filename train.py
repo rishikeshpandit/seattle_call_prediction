@@ -15,6 +15,7 @@ def train(df):
     # Check if config file exists
     config.read("options.ini")
     end_date = config.get('datetime', 'end_date') #This will be end date of main dataframe
+    weather = config.getboolean('boolvals', 'weather')
     
 
     #For separating train and test dataframes before and after this date: Default (enddate -1Y )
@@ -27,8 +28,8 @@ def train(df):
     train, test = cd.DataPrep.train_test_split_df(df, split_date) 
 
     #Preparing Model Dataframe
-    X_train, Y_train = cd.DataPrep.create_features(train, label='counts', weather=True)
-    X_test, Y_test = cd.DataPrep.create_features(test, label='counts', weather=True)
+    X_train, Y_train = cd.DataPrep.create_features(train, label='counts', weather=weather)
+    X_test, Y_test = cd.DataPrep.create_features(test, label='counts', weather=weather)
 
     #Setting Model Params
     model = XGBRegressor(n_estimators=1000)

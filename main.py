@@ -5,7 +5,7 @@ import pandas as pd
 from pandas import read_csv
 import pickle
 import os
-
+import configparser
 #import prepdata
 import dataprep
 #import trainfile
@@ -53,6 +53,11 @@ def main():
    
 
 if __name__ == "__main__":
+    
+    config = configparser.ConfigParser()
+    # Check if config file exists
+    config.read("options.ini")
+    weather = config.getboolean('boolvals', 'weather')
 
     if os.path.isfile("pima.pickle.dat" and "to_predict_df.csv" and "counts_df.csv"):
         logging.info("****************  Loading Pre-trained Model! ******************")
@@ -71,9 +76,13 @@ if __name__ == "__main__":
     else:
         logging.info("****************  Preparing Data, Training Model and Predicting From Scratch ******************")
         print("Not Found previous files to load, Training Model from scratch")
-        wdf = read_csv("seattle_weather.csv")
+        
         cdf = read_csv("seattle_sos.csv")
-        df = dataprep.dataprep(cdf, wdf)
+        if weather == True:
+            wdf = read_csv("seattle_weather.csv")
+            df = dataprep.dataprep(cdf, wdf)
+        else:
+            df = dataprep.dataprep(cdf)
         print("Data prep Successful, Stored Dataframe to to_train_df.csv")
         model = train.train(df)
         print("Model Training Successful, Stored Dataframe to to_predict_df.csv")
